@@ -1,2 +1,18 @@
-<h1>Deal#new</h1>
-<p>Find me in app/views/deal/new.html.erb</p>
+ <h1>New Deal</h1>
+ <%= form_for [@deal] do |f| %>
+	<div class="field">
+		<%= f.label :project_name %>
+		<%= f.text_field :project_name %>
+	</div>
+	<div class="field">
+		<%= f.label :unit_number %>
+		<%= f.number_field :unit_number %>
+	</div>
+	<div class="field">
+		<%= f.label :developer %>
+		<%= f.text_field :developer %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Create New Deal" %>
+	</div>
+ <% end %>
