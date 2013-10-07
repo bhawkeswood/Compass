@@ -13,6 +13,12 @@ class DealsController < ApplicationController
 
   def create
     @deal = Deal.new deal_params
+
+    if @deal.save
+      redirect_to @deal
+    else
+      render :new
+    end
   end
 
   def edit
