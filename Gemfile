@@ -10,6 +10,8 @@ gem 'sorcery'
 
 gem 'bootstrap-sass'
 
+gem 'simple_form'
+
 group :assets do 
 # Use SCSS for stylesheets
 	gem 'sass-rails', '~> 4.0.0'
