@@ -4,5 +4,8 @@
 	<%= f.input :project_name, placeholder: 'e.g. GlassDoor Towers' %>
 	<%= f.input :unit_number, placeholder: 'e.g. 1816' %>
 	<%= f.input :developer, placeholder: 'e.g. K&B Corp.' %>
+	<%= f.input :req_one, label: 'Requirements', collection: ["Mortgage Pre-Approval", "Commitment Letter", "Deposit Cheques", "Brokerage Form"] %>
+	<%= f.input :req_two, label: 'Requirements',  collection: ["Mortgage Pre-Approval", "Commitment Letter", "Deposit Cheques", "Brokerage Form"] %>
+	<%= f.input :req_three, label: 'Requirements',  collection: ["Mortgage Pre-Approval", "Commitment Letter", "Deposit Cheques", "Brokerage Form"] %>
 	<%= f.button :submit %>
 <% end %>

@@ -33,7 +33,7 @@ class DealsController < ApplicationController
   private
 
   def deal_params
-    params.require(:deal).permit(:project_name, :developer, :unit_number, :user_id)
+    params.require(:deal).permit(:project_name, :developer, :unit_number, :user_id, :req_one, :req_two, :req_three)
   end
 
 end
