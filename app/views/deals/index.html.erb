@@ -3,6 +3,9 @@
 <div class="projects">
 	<% @deals.each do |deal| %>
 	<h3><%= link_to deal.project_name, deal %></h3>
+		<p>
+			Created On:<%= deal.created_at %>
+		</p>
 		<% deal.tasks.each do |task| %>
 			<p><% if task.done == false  %>
 					<%= task.description %>
