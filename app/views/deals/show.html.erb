@@ -3,9 +3,20 @@
 <h3>Unit #<%= @deal.unit_number %></h3>
 
 <div class="requirements">
+  <h3> Incomplete Tasks for <%= @deal.project_name %></h3>
   <% @deal.tasks.each do |task| %>
-    <p><%= task.description %></p>
-    <p>Finished? <%= task.done %></p>
+    <p><% if task.done == false %>
+            <%=  task.description %>
+          <% end %>
+    </p>
+  <% end %>
+  <br/>
+  <h3> Tasks You Have Finished </h3>
+  <% @deal.tasks.each do |task| %>
+    <p><% if task.done == true %>
+            <%=  task.description %>
+          <% end %>
+    </p>
   <% end %>
 </div>
 

@@ -2,6 +2,13 @@
 
 <div class="projects">
 	<% @deals.each do |deal| %>
-	<h3><%= link_to deal.project_name, deal %></h3><br/>
+	<h3><%= link_to deal.project_name, deal %></h3>
+		<% deal.tasks.each do |task| %>
+			<p><% if task.done == false  %>
+					<%= task.description %>
+					<% end %>
+			</p>
+		<% end %>
+		<br/>
 	<% end %>
 </div>
