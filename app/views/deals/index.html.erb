@@ -1,2 +1,7 @@
-<h1>Deal#index</h1>
-<p>Find me in app/views/deal/index.html.erb</p>
+<h1>Incomplete Tasks</h1>
+
+<div class="projects">
+	<% @deals.each do |deal| %>
+	<h3><%= link_to deal.project_name, deal %></h3><br/>
+	<% end %>
+</div>

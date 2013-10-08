@@ -22,12 +22,22 @@ class DealsController < ApplicationController
   end
 
   def edit
+    @deal = Deal.find(params[:id])
   end
 
   def update
+    @deal = Deal.find(params[:id])
+    if @deal.update_attributes deal_params
+      redirect_to deal_path
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @deal = Deal.find(params[:id])
+    @deal.destroy
+    redirect_to deals_path
   end
 
   private

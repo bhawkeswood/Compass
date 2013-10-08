@@ -1,3 +1,8 @@
 <%= @deal.project_name %>
 <%= @deal.developer %>
 <%= @deal.unit_number %>
+
+<%= link_to "Edit this Deal", edit_deal_path %> | 
+<%= link_to "Back to To Do List", deals_path %> |
+<%= link_to "Delete this Deal", @deal, :confirm => "Are you sure?",
+ :method => :delete %>
