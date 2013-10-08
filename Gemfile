@@ -12,6 +12,8 @@ gem 'bootstrap-sass'
 
 gem 'simple_form'
 
+gem "cocoon"
+
 group :assets do 
 # Use SCSS for stylesheets
 	gem 'sass-rails', '~> 4.0.0'
