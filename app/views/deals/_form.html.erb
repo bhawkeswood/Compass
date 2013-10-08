@@ -2,18 +2,15 @@
   <%= f.input :project_name, placeholder: 'e.g. GlassDoor Towers' %>
   <%= f.input :unit_number, placeholder: 'e.g. 1816' %>
   <%= f.input :developer, placeholder: 'e.g. K&B Corp.' %>
-  <%= f.button :submit %>
 
-
-<h3>Tasks</h3>
-<div id="tasks">
-    <%= f.simple_fields_for :tasks do |task| %>
-      <%= render 'task_fields', :f => task %>
+  <h3>Tasks</h3>
+  <div id="tasks">
+      <%= f.simple_fields_for :tasks do |task| %>
+        <%= render 'task_fields', :f => task %>
+      <% end %>
       <div class="links">
         <%= link_to_add_association 'Add Task', f, :tasks %>
       </div>
-      <%= f.submit %>
-    <% end %>
-</div>
+  </div>
+  <%= f.submit %>
 <% end %>
-
