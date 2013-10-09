@@ -1,5 +1,8 @@
 <div class="nested-fields">
-  <%= f.input :description %>
+  <%= f.input :description, collection: ["Commitment Letter", "Deposit Cheques", "Firm Date", "Mortgage Pre-Approval", "Trade Record"] %>
+  <div id="deal">
+  	<%= f.input :due_date %>
+  </div>
   <%= f.input :done, :as => :boolean %>
   <%= link_to_remove_association "Remove Task", f %>
 </div>
