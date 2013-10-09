@@ -6,7 +6,9 @@
   <h3> Incomplete Tasks for <%= @deal.project_name %></h3>
   <% @deal.tasks.each do |task| %>
     <p><% if task.done == false %>
-            <%=  task.description %>
+            <%= task.description %>
+            <strong>|| Date Due: 
+            <%= task.due_date %></strong>
           <% end %>
     </p>
   <% end %>

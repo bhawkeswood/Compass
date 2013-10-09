@@ -9,7 +9,9 @@
 		<% deal.tasks.each do |task| %>
 			<p><% if task.done == false  %>
 					<%= task.description %>
-					<% end %>
+            <strong>|| Date Due: 
+            <%= task.due_date %></strong>
+            <% end %>
 			</p>
 		<% end %>
 		<br/>
