@@ -1,0 +1,22 @@
+{
+  "name": "Compass",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bhawkeswood/Compass",
+  "authors": [
+    "Kim Yee",
+    "Brendon Hawkeswood"
+  ],
+  "description": "A COMmission tracking Personal ASSistant for Real Estate agents",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "typeahead.js": "~0.9.3"
+  }
+}
