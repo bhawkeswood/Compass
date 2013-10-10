@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = login(params[:email], params[:password])
       if user
-        redirect_back_or_to root_url, :notice => "Logged in as #{user.first_name}!"
+        redirect_back_or_to deals_path  , :notice => "Logged in as #{user.first_name}!"
       else
         flash.now.alert = "Email or Password was Invalid"
         render :new

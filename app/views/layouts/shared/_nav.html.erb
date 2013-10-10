@@ -11,6 +11,11 @@
 						<%= link_to 'Create a New Deal', new_deal_path %>
 					</li>
 				</ul>
+				<div class="pull-right">
+							<% if logged_in? %>
+								<%= link_to 'Logout', logout_path, class: 'btn btn-default' %>
+							<% end %>
+				</div>
 			</div>
 		</div>		
 	</div>

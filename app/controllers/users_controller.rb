@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       auto_login(@user)
-      redirect_to root_url, :notice => "Account Created.  Welcome #{@user.first_name}."
+      redirect_to deals_path, :notice => "Account Created.  Welcome #{@user.first_name}."
     else
       render :new
     end
@@ -16,6 +16,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:deal).permit(:first_name, :last_name, :email)
+    params.require(:user).permit(:first_name, :last_name, :email, :password)
   end
 end
