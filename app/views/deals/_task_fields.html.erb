@@ -1,5 +1,7 @@
 <div class="nested-fields">
-  <%= f.input :description, collection: ["Commitment Letter", "Deposit Cheques", "Firm Date", "Mortgage Pre-Approval", "Trade Record"] %>
+  <div id="req_description">
+  	<%= f.input :description %>
+  </div>
   <div id="task_datepicker">
   	<%= f.input :due_date %>
   </div>
