@@ -3,6 +3,13 @@ Compass::Application.routes.draw do
   resources :deals
 
   root to: 'welcome#index'
+
+  resources :sessions
+
+  get 'login' => 'sessions#new', :as => "login"
+  get 'logout' => 'sessions#destroy', :as => "logout"
+
+  resources :users, :except => [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

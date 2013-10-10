@@ -1,0 +1,18 @@
+<%= simple_form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.input :first_name, placeholder: 'Jane' %>
+  <%= f.input :last_name, placeholder: 'Smith' %>
+  <%= f.input :email, placeholder: 'jsmith@example.com' %>
+  <%= f.input :password, hint: 'Create a unique, difficult to guess password' %>
+  <%= f.input :password_confirmation, hint: 'Input must match the above password' %>
+  <%= f.button :submit %> 
+<% end %>
