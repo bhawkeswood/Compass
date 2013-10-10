@@ -3,6 +3,8 @@ Compass::Application.routes.draw do
   get "welcome/index"
   resources :deals
 
+  get 'complete' => 'deals#complete', :as => "complete"
+
   root to: 'welcome#index'
 
   resources :sessions

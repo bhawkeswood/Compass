@@ -42,6 +42,10 @@ class DealsController < ApplicationController
     redirect_to deals_path
   end
 
+  def complete
+    @deals = Deal.all
+  end
+
   private
 
   def deal_params

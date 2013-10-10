@@ -15,6 +15,5 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require typeahead.js/dist/typeahead.min.js
-//= require turbolinks
 //= require_tree .
 //= require cocoon

@@ -11,6 +11,7 @@
 					<%= task.description %>
             <strong>|| Date Due: 
             <%= task.due_date %></strong>
+            <%= check_box(@task, :done) %>
             <% end %>
 			</p>
 		<% end %>

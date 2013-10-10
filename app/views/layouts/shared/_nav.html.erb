@@ -10,6 +10,9 @@
 					<li class="<%= 'active' if current_page? new_deal_path %>">
 						<%= link_to 'Create a New Deal', new_deal_path %>
 					</li>
+					<li class="<%= 'active' if current_page? complete_path %>">
+						<%= link_to 'Completed List', complete_path %>
+					</li>
 				</ul>
 				<div class="pull-right">
 							<% if logged_in? %>
