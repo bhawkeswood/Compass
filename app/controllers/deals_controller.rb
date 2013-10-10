@@ -1,4 +1,6 @@
 class DealsController < ApplicationController
+  before_filter :require_login
+
   def index
     @deals = Deal.all
   end
