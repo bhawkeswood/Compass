@@ -12,4 +12,8 @@ $(function(){
 							"Trade Record"]
 		});
 	});
+	$('input:checkbox').click(function(){
+		$(this).parent().remove();
+	});
 });
+
