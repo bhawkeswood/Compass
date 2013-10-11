@@ -14,6 +14,16 @@ $(function(){
 	});
 	$('input:checkbox').click(function(){
 		$(this).parent().remove();
+		var url = $(this).data("task").val();
 	});
 });
 
+
+/*
+$.ajax({
+	url: 'updat
+}).done(function() {
+	// may want to remove task once you know it has been successful;
+})
+
+*/

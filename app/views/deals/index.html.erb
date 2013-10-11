@@ -8,7 +8,7 @@
 		</p>
 		<% deal.incomplete_tasks.each do |task| %>
 			<p>
-          <%= check_box(@task, :done) %>
+          <input type="checkbox" data-task="<%= task.id %>" />
 					<%= task.description %>
             <strong>|| Date Due: 
             <%= task.due_date %></strong>  
