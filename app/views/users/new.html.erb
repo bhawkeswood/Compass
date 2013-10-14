@@ -1,3 +1,4 @@
+<div class="hero-unit">
 <%= simple_form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
@@ -16,3 +17,4 @@
   <%= f.input :password_confirmation, hint: 'Input must match the above password' %>
   <%= f.button :submit %> 
 <% end %>
+</div>

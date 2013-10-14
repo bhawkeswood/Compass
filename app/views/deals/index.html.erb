@@ -1,8 +1,8 @@
+<div class="hero-unit">
 <h1>Incomplete Tasks</h1>
 
-<div class="projects">
 	<% @deals.each do |deal| %>
-	<h3><%= link_to deal.project_name, deal %></h3>
+	<div class="btn-medium btn-danger"><%= link_to deal.project_name, deal %></div>
 		<p>
 			Created On:<%= deal.created_at %>
 		</p>

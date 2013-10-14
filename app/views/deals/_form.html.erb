@@ -8,7 +8,7 @@
       <%= f.simple_fields_for :tasks do |task| %>
         <%= render 'task_fields', :f => task %>
       <% end %>
-      <div class="links">
+      <div class="btn default">
         <%= link_to_add_association 'Add Task', f, :tasks %>
       </div>
   </div>
