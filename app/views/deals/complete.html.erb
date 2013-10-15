@@ -3,7 +3,7 @@
 
 <div class="projects">
   <% @deals.each do |deal| %>
-  <div class="btn-medium btn-success"><%= link_to deal.project_name, deal %></div>
+  <button type="button" class="btn btn-success btn-lg btn-block"><%= link_to deal.project_name, deal %></button>
     <p>
       Created On:<%= deal.created_at %>
     </p>

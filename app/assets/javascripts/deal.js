@@ -12,18 +12,15 @@ $(function(){
 							"Trade Record"]
 		});
 	});
-	$('input:checkbox').click(function(){
-		$(this).parent().remove();
-		var url = $(this).data("task").val();
+	$('.incomplete').click(function(){
+		var incomplete_task = $(this).data("task-id");
+		var _this = this;
+
+		$.ajax({
+			type: 'PUT',
+			url: incomplete_task
+		}).done(function() {
+			$(_this).parent().remove();
+		})
 	});
 });
-
-
-/*
-$.ajax({
-	url: 'updat
-}).done(function() {
-	// may want to remove task once you know it has been successful;
-})
-
-*/

@@ -1,8 +1,16 @@
 <div class="hero-unit">
-<h1 class="text-center">This is your COMPASS</h1>
-<p class="text-center">COMmission Personal ASSistant.  And yup, I just said ASS.</p>
+  <h1 class="text-center">This is your COMPASS</h1>
+  <p class="text-center">COMmission Personal ASSistant.  And yup, I just said ASS.</p>
 
-<%= link_to 'Login', new_session_path, class: 'btn btn-warning pull-center' %>
+  <div class="welcome hero-unit pull-left text-center">
+    <h2>Already a user?</h2><br/>
+    <h4>Sign in below!</h4><br/>
+      <%= link_to 'Login', new_session_path, class: 'btn btn-warning btn-large' %>
+  </div>
 
-<%= link_to 'Sign Up', [:new, :user], class: 'btn btn-primary pull-right' %>
-<div>
+  <div class="welcome hero-unit pull-right text-center">
+    <h2>New User?</h2><br/>
+    <h4>Sign up here!</h4><br/>
+      <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-primary btn-large' %>
+  </div>
+</div>
