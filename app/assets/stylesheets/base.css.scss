@@ -2,7 +2,13 @@
 
 body {
 	padding: 50px;
-  background-image: url('http://fc09.deviantart.net/fs47/f/2009/216/d/f/df4407d2a04dd2a1688b7e8fabf78812.jpg')
+  background-image: url('http://profilanakangin.files.wordpress.com/2012/03/black-and-white-compass-rain-drops-walp-long-goodbye.png');
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.hero-unit {
+  box-shadow: 3px 3px 2px #888888;
 }
 
 .ui-datepicker { 
@@ -11,5 +17,14 @@ body {
 }
 
 .welcome {
+  margin-top: 100px;
+  width: 250px;
+}
+
+.new_deal {
+  margin-top: 100px;
+}
+
+#tasks {
   margin-top: 100px;
 }

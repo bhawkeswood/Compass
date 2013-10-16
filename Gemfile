@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'sorcery'
 
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 
 gem 'simple_form'
 

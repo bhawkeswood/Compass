@@ -6,7 +6,7 @@
 				<% if logged_in? %>
 				<ul class="nav">
 					<li class="<%= 'active' if current_page? deals_path %>">
-						<%= link_to 'To Do List', :deals %>
+						<%= link_to 'Incomplete Tasks', :deals %>
 					</li>
 					<li class="<%= 'active' if current_page? new_deal_path %>">
 						<%= link_to 'Create a New Deal', new_deal_path %>
