@@ -50,7 +50,7 @@ class DealsController < ApplicationController
 
   def deal_params
     params.require(:deal).permit(:project_name, :developer, :unit_number,
-     :user_id, tasks_attributes: [:id, :description, :done, :_destroy, :due_date])
+     :user_id, tasks_attributes: [:id, :description, :done, :_destroy, :due_date], commissions_attributes: [:id, :description, :amount, :commission_date, :done, :_destroy])
   end
 
 end

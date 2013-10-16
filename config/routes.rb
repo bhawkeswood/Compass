@@ -1,8 +1,10 @@
 Compass::Application.routes.draw do
   
+  get "commissions/update"
   get "welcome/index"
   resources :deals
   resources :tasks, :only => [:update]
+  resources :commissions, :only => [:update]
 
   get 'complete' => 'deals#complete', :as => "complete"
   # get 'update' => 'tasks#update', :as => 'task_update'
