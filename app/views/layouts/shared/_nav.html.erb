@@ -6,7 +6,7 @@
 				<% if logged_in? %>
 				<ul class="nav">
 					<li class="<%= 'active' if current_page? deals_path %>">
-						<%= link_to "<i class='icon-ban-circle'></i> Incomplete Tasks #{sum_of_incomplete_tasks(@deals)}".html_safe, :deals %>
+						<%= link_to "<i class='icon-ban-circle'></i> Incomplete Tasks <span class='badge'>#{sum_of_incomplete_tasks(@deals)}</span>".html_safe, :deals %>
 					</li>
 					<li class="<%= 'active' if current_page? new_deal_path %>">
 						<%= link_to '<i class="icon-star"></i> Create a New Deal'.html_safe, new_deal_path %>

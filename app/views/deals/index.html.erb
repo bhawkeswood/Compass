@@ -1,7 +1,8 @@
 <div class="hero-unit">
 	<div id="incompleteTask">
-		<h1>Incomplete Tasks</h1>
-
+	
+			<%= all_deals(@deals) %>
+		
 			<% @deals.each do |deal| %>
 				<!-- We only want to return deals with unfinished tasks -->
 				<% if deal.incomplete_tasks.empty? == false %>
@@ -20,7 +21,6 @@
 			            <strong>|| Date Due: <%= task.due_date %></strong>  
 						</p>
 					<% end %>
-
 				<% end %> <!-- end if statement -->
 			<% end %> <!-- end @deals.each -->
 	</div> <!-- end #incompleteTask -->
