@@ -6,13 +6,13 @@
 				<% if logged_in? %>
 				<ul class="nav">
 					<li class="<%= 'active' if current_page? deals_path %>">
-						<%= link_to 'Incomplete Tasks', :deals %>
+						<%= link_to "<i class='icon-ban-circle'></i> Incomplete Tasks #{sum_of_incomplete_tasks(@deals)}".html_safe, :deals %>
 					</li>
 					<li class="<%= 'active' if current_page? new_deal_path %>">
-						<%= link_to 'Create a New Deal', new_deal_path %>
+						<%= link_to '<i class="icon-star"></i> Create a New Deal'.html_safe, new_deal_path %>
 					</li>
 					<li class="<%= 'active' if current_page? complete_path %>">
-						<%= link_to 'Completed List', complete_path %>
+						<%= link_to '<i class="icon-ok"></i> Completed List'.html_safe, complete_path %>
 					</li>
 				</ul>
 				<% end %>
