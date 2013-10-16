@@ -2,15 +2,18 @@
   <div id="description">
     <%= f.input :installment, placeholder: ' 1 = 1st installment' %>
   </div>
+
   <div id="amount">
   	<%= f.input :amount, placeholder: 'Commission amount' %>
   </div>
-  <br/>
+  
   <div id="commission_datepicker">
   	<%= f.input :commission_date %>
   </div>
-    <%= f.input :done %>
+
+    <%= f.input :done, label: 'Commission Paid' %>
     <div class="btn default">
       <%= link_to_remove_association "Remove Commission", f %>
     </div>
+
 </div>
