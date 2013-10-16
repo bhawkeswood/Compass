@@ -7,26 +7,58 @@
   <h3> Incomplete Tasks for <%= @deal.project_name %></h3>
   <% @deal.incomplete_tasks.each do |task| %>
     <p>
-            <%= task.description %>
-            <strong>|| Date Due: 
-            <%= task.due_date %></strong>
-          
+      <%= task.description %>
+      <strong>|| Date Due: 
+      <%= task.due_date %></strong>
     </p>
   <% end %>
-  <br/>
+
+  <br>
+
   <h3> Tasks You Have Finished </h3>
   <% @deal.tasks.each do |task| %>
-    <p><% if task.done == true %>
-            <%=  task.description %>
-          <% end %>
+    <p>
+      <% if task.done == true %>
+          <%=  task.description %>
+        <% end %>
     </p>
   <% end %>
-</div>
+</div> <!-- end class requirements -->
+
+<div class="showCommission">
+  <h3> Unpaid Commissions </h3>
+  <% @deal.unpaid_commissions.each do |commission| %>
+    <p>
+      <strong> Commission Installment:</strong>
+      <%= commission.installment %>
+      <br>
+      <strong>Commission Amount:</strong>
+      <%= commission.amount %>
+      <strong>|| Date Due:</strong>
+      <%= commission.commission_date %>
+    </p>
+  <% end %>
+
+  <br>
+
+  <h3>Paid Commissions</h3>
+  <% @deal.commissions.each do |commission| %>
+    <p>
+      <% if commission.done == true %>
+        <strong> Commission Installment:</strong>
+        <%= commission.installment %>
+        <br>
+        <strong>Commission Amount:</strong>
+        <%= commission.amount %>
+      <% end %>
+    </p>
+  <% end %>
+</div><!-- end class showCommission -->
 
 
 <%= link_to "Edit this Deal", edit_deal_path %> | 
 <%= link_to "Back to To Do List", deals_path %> |
-<%= link_to "Delete this Deal", @deal, :confirm => "Are you sure?",
+<%= link_to "Delete this Deal", @deal, :confirm => "Are you sure you want to delete this deal?",
  :method => :delete %>
 
 </div>
