@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131008234651) do
+ActiveRecord::Schema.define(version: 20131016155001) do
+
+  create_table "commissions", force: true do |t|
+    t.string   "description"
+    t.integer  "amount"
+    t.string   "commission_date"
+    t.boolean  "done"
+    t.integer  "deal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "deals", force: true do |t|
     t.string   "project_name"
@@ -32,6 +42,7 @@ ActiveRecord::Schema.define(version: 20131008234651) do
     t.boolean  "done"
     t.integer  "deal_id"
     t.string   "due_date"
+    t.integer  "amount"
   end
 
   create_table "users", force: true do |t|

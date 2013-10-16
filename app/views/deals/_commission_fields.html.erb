@@ -1,0 +1,16 @@
+<div class="nested-fields">
+  <div id="description">
+    <%= f.input :description %>
+  </div>
+  <div id="amount">
+  	<%= f.input :amount %>
+  </div>
+  <br/>
+  <div id="commission_datepicker">
+  	<%= f.input :commission_date %>
+  </div>
+    <%= f.input :done %>
+    <div class="btn default">
+      <%= link_to_remove_association "Remove Commission", f %>
+    </div>
+</div>

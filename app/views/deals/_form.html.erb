@@ -12,5 +12,15 @@
         <%= link_to_add_association 'Add Task', f, :tasks %>
       </div>
   </div>
+
+  <h3>Commissions</h3>
+  <div id="commissions">
+      <%= f.simple_fields_for :commissions do |commissions| %>
+        <%= render 'commission_fields', :f => commissions %>
+      <% end %>
+      <div class="btn default">
+        <%= link_to_add_association 'Add Commissions', f, :commissions %>
+      </div>
+  </div>
   <%= f.submit %>
 <% end %>

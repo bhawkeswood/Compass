@@ -11,7 +11,6 @@ $(function(){
 							"Mortgage Pre-Approval", 
 							"Trade Record"]
 		});
-	});
 	$('.incomplete').click(function(){
 		var incomplete_task = $(this).data("task-id");
 		var _this = this;
@@ -22,5 +21,9 @@ $(function(){
 		}).done(function() {
 			$(_this).parent().remove();
 		})
+	});
+	$('#commissions').on("cocoon:after-insert", function(){
+		$('div#commission_datepicker input').datepicker();
+		});
 	});
 });

@@ -20,5 +20,26 @@
 		<% end %>
 		<br/>
 	<% end %>
+
+<h1>Commissions</h1>	
+	<% @deals.each do |deal| %>
+		<!-- We only want to return deals with unfinished tasks -->
+			<% if deal.unpaid_commissions.empty? == false %>
+			<button type="button" class="btn btn-default btn-lg btn-block">
+					<%= link_to deal.project_name, deal %>
+			</button>
+			<p class="btn btn-default btn-mini pull-right">	
+				<%= link_to "Edit this Deal", edit_deal_path(deal) %>
+			</p>
+				<% deal.unpaid_commissions.each do |commission| %>
+					<p>
+		          <input type="checkbox" data-task-id="<%= task_path(task) %>" class="incomplete">
+							<%= commission.description %>
+		            <strong>|| Commission Date: <%= commission.commission_date %></strong>  
+					</p>
+				<% end %>
+			<% end %>
+			<br/>
+	<% end %>
 </div>
 
