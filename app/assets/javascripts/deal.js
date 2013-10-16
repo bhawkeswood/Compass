@@ -10,7 +10,10 @@ $(function(){
 							"Firm Date", 
 							"Mortgage Pre-Approval", 
 							"Trade Record"]
-		});
+		}); //end ('div#req_description input').typeahead
+	}); //end ('#tasks').on
+
+
 	$('.incomplete').click(function(){
 		var incomplete_task = $(this).data("task-id");
 		var _this = this;
@@ -20,10 +23,18 @@ $(function(){
 			url: incomplete_task
 		}).done(function() {
 			$(_this).parent().remove();
-		})
-	});
-	$('#commissions').on("cocoon:after-insert", function(){
-		$('div#commission_datepicker input').datepicker();
-		});
-	});
+		}); //end .ajax for incomplete task
+	}); //end ('.incomplete').click
+
+	$('.unpaid').click(function(){
+		var unpaid_comm = $(this).data("commission-id");
+		var _this = this;
+
+		$.ajax({
+			type: 'PUT',
+			url: unpaid_comm
+		}).done(function() {
+			$(_this).parent().remove();
+		}); //end .ajax for unpaid commission
+	});	//end ('.unpaid').click
 });
