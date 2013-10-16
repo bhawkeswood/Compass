@@ -4,7 +4,7 @@
   <%= f.input :developer, placeholder: 'e.g. K&B Corp.', hint: '* required field' %>
 
   <h3>Tasks</h3>
-  <div id="tasks">
+  <div class="tasks">
       <%= f.simple_fields_for :tasks do |task| %>
         <%= render 'task_fields', :f => task %>
       <% end %>
@@ -14,7 +14,7 @@
   </div>
 
   <h3>Commissions</h3>
-  <div id="commissions">
+  <div class="commissions">
       <%= f.simple_fields_for :commissions do |commissions| %>
         <%= render 'commission_fields', :f => commissions %>
       <% end %>

@@ -1,7 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 $(function(){
-	$('#tasks').on("cocoon:after-insert", function(){
+	$('.tasks').on("cocoon:after-insert", function(){
 		$('div#task_datepicker input').datepicker();
 		$('div#req_description input').typeahead({
 			name: 'description',
@@ -25,6 +25,10 @@ $(function(){
 			$(_this).parent().remove();
 		}); //end .ajax for incomplete task
 	}); //end ('.incomplete').click
+
+	$('.commissions').on("cocoon:after-insert", function(){
+		$('div#commission_datepicker input').datepicker();
+	}); // end ('#unpaidCommission').on(
 
 	$('.unpaid').click(function(){
 		var unpaid_comm = $(this).data("commission-id");
