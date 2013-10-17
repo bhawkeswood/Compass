@@ -15,8 +15,9 @@ class DealsController < ApplicationController
 
   def create
     @deal = Deal.new deal_params
-
+    @user = current_user
     if @deal.save
+      ModelMailer.event_creation_notification(@user, @deal).deliver
       redirect_to @deal
     else
       render :new

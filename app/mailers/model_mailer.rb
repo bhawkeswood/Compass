@@ -11,4 +11,11 @@ class ModelMailer < ActionMailer::Base
 
     mail(to: "<#{user.email}>", subject: "Success! You did it.")
   end
+
+  def event_creation_notification(user, deal)
+    @user = user
+    @deal = deal
+
+    mail(to: "<#{user.email}>", subject: "Hey #{user.first_name}, you made a new Deal!")
+  end
 end
