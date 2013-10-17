@@ -1,16 +1,38 @@
 <div class="hero-unit">
-<h1>Completed Tasks</h1>
-
-<div class="projects">
-  <% @deals.each do |deal| %>
-  <button type="button" class="btn btn-default btn-lg btn-block"><%= link_to deal.project_name, deal %></button>
-    <% deal.tasks.each do |task| %>
-      <p data-task-id="<%= task.id %>"><% if task.done == true  %>
-          <%= task.description %>
-            <% end %>
-      </p>
-    <% end %>
-    <br/>
-  <% end %>
-</div>
+  <h1 class="list_header">Completed Tasks</h1>
+    <% @deals.each do |deal| %>
+        <h3 class="link_proj_name"><%= link_to deal.project_name, deal %></h3>
+      <% deal.tasks.each do |task| %>
+        <p data-task-id="<%= task.id %>">
+          <% if task.done == true  %>
+            <div class="content">
+              <%= task.description %>
+            </div>
+          <% end %> <!-- end if task done statement -->
+        </p>
+      <% end %> <!-- end iteration through tasks -->
+      <br/>
+    <% end %> <!-- end iteration through deals -->
+  
+  <h1 class="list_header">Paid Commissions</h1>
+    <% @deals.each do |deal| %>
+        <h3 class="link_proj_name"><%= link_to deal.project_name, deal %></h3>
+      <% deal.commissions.each do |commission| %>
+        <p data-commission-id="<%= commission.id %>">
+          <% if commission.done == true  %>
+            <div class="content">
+              Commission Installment:
+              <%= commission.installment %>
+              <br>
+              Commission Amount:
+              <%= commission.amount %>
+              <br>
+              Commission Due:
+              <%= commission.commission_date %>
+            </div>
+          <% end %> <!-- end if commission done statement -->
+        </p>
+      <% end %> <!-- end iteration through commissions -->
+      <br/>
+    <% end %> <!-- end iteration through deals -->
 </div>
