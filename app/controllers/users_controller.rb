@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      ModelMailer.user_sign_up_notification(@user).deliver
       auto_login(@user)
       redirect_to deals_path, :notice => "Account Created.  Welcome #{@user.first_name}."
     else
