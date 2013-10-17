@@ -1,5 +1,5 @@
 class AddInstallmentToCommissions < ActiveRecord::Migration
   def change
-    add_column :commissions, :installment, :integer
+    # add_column :commissions, :installment, :integer
   end
 end

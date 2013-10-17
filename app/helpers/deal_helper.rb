@@ -20,7 +20,7 @@ module DealHelper
 
   def all_commissions(deals)
     deals.each do |deal|
-      if deal.unpaid_commissions.empty? == false
+      if deal.unpaid_commissions.empty? == true
         return "<h1>You've been paid!</h1>".html_safe
       else
         return "<h1>Unpaid Commissions</h1>".html_safe
