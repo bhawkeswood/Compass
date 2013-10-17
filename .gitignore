@@ -16,5 +16,5 @@ log/*.log
 tmp/*
 
 #Ignore others
-conifg/environments/**.rb
+config/environments/**.rb
 config/**.yml

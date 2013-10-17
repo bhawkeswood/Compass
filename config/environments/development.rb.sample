@@ -19,11 +19,11 @@ Compass::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :authentication => :plain,
-    :address => "smtp.gmail.org",
+    :address => "change me",
     :port => 587,
     :domain => "gmail.com",
     :user_name => "compass.application@gmail.com",
-    :password => "Com20Pass13"
+    :password => "change me"
   }
 
   # Print deprecation notices to the Rails logger.
