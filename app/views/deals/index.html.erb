@@ -1,6 +1,6 @@
 <div class="hero-unit">
-	<!-- refer to method in deal_helper-->
-	<%= all_deals(@deals) %>
+	<!-- Display msg when all tasks are complete-->
+	<%= all_tasks(@deals) %>
 
 	<% @deals.each do |deal| %>
 		<!-- We only want to return deals with unfinished tasks -->
@@ -22,7 +22,9 @@
 	
 	<br>
 	
-	<h1 class="list_header">Commissions</h1>	
+	<!-- Display msg when all commissions are paid-->
+	<%= all_commissions(@deals) %>
+
 		<% @deals.each do |deal| %>
 			<!-- We only want to return deals with unpaid commissions -->
 			<% if deal.unpaid_commissions.empty? == false %>

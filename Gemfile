@@ -6,10 +6,8 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'pg' # replacing SQLite w/ PostgreSQL
 gem 'sorcery'
-
-gem 'bootstrap-sass'
-gem 'bootswatch-rails'
 
 gem 'simple_form'
 
@@ -29,6 +27,10 @@ group :assets do
 
 	# Use CoffeeScript for .js.coffee assets and views
 	gem 'coffee-rails', '~> 4.0.0'
+
+	gem 'bootstrap-sass'
+	
+	gem 'bootswatch-rails'
 end
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -40,9 +42,15 @@ end
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'jquery-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :tools do
+  gem 'guard-rspec' # automatically runs our tests whenever there have been changes made to them
 end
 
 
@@ -57,3 +65,14 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0' # using rspec instead of test unit
+  gem 'better_errors' # makes the errors we see in the browser more descriptive
+  gem "binding_of_caller"
+  gem 'pry-rails'
+  gem "factory_girl_rails" 
+  gem "capybara" # needed for our integration tests, which we'll talk about more later
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+end
