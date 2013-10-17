@@ -16,4 +16,5 @@
 /tmp
 
 #Ignore others
-/conifg/environments/develpment.rb
+/conifg/environments/**.rb
+/config/**.yml
