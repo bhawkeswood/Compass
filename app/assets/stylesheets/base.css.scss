@@ -12,8 +12,7 @@ body {
 
 .hero-unit {
   background-color: #1C1E22;
-  border: solid #0C0D0E 1px; 
-  z-index: 1; 
+  border: solid #0C0D0E 1px;  
 }
 
 .ui-datepicker { 
@@ -83,9 +82,4 @@ a {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-}
-
-.search_form {
-  margin-left: 600px;
-  z-index: 5;
 }

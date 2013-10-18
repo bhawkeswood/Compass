@@ -7,10 +7,12 @@ class DealsController < ApplicationController
   end
 
   def show
+    @search = Deal.search(params[:q])
     @deal = Deal.find(params[:id])
   end
 
   def new
+    @search = Deal.search(params[:q])
     @deal = Deal.new
   end
 
@@ -46,6 +48,7 @@ class DealsController < ApplicationController
   end
 
   def complete
+    @search = Deal.search(params[:q])
     @deals = Deal.all
   end
 

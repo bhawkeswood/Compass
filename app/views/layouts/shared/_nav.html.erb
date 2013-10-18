@@ -15,10 +15,13 @@
 						<%= link_to 'Completed List'.html_safe, complete_path %>
 					</li>
 					<li class="navbar-form navbar-left">
+				
 						<%= search_form_for @search do |f| %>
 							<%= f.text_field :project_name_cont, placeholder: "Deal Name Contains" %>
 							<%= f.submit %>
 						<% end %>
+						
+					
 					</li>
 				</ul>
 				<% end %>
