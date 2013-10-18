@@ -9,4 +9,5 @@ class Commission < ActiveRecord::Base
 		price_in_dollars = amount.to_f/ 1
 		sprintf("%.2f", price_in_dollars)  	
 	end 
+
 end

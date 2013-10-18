@@ -27,7 +27,10 @@ $(function(){
 	}); //end ('.incomplete').click
 
 	$('.commissions').on("cocoon:after-insert", function(){
-		$('div#commission_datepicker input').datepicker();
+		$('div#commission_datepicker input').datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
 	}); // end ('#unpaidCommission').on(
 
 	$('.unpaid').click(function(){
