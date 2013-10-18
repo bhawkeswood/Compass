@@ -3,27 +3,27 @@
     <%= f.input :project_name, placeholder: 'e.g. GlassDoor Towers' %>
     <%= f.input :unit_number, placeholder: 'e.g. 1816' %>
     <%= f.input :developer, placeholder: 'e.g. K&B Corp.', hint: '* required field' %>
+
+    <h3>Tasks</h3>
+    <div class="tasks">
+        <%= f.simple_fields_for :tasks do |task| %>
+          <%= render 'task_fields', :f => task %>
+        <% end %>
+        <div class="btn default">
+          <%= link_to_add_association 'Add Task', f, :tasks %>
+        </div> <!-- end Add Task btn -->
+    </div> <!-- end class tasks -->
+
+    <h3>Commissions</h3>
+    <div class="commissions">
+        <%= f.simple_fields_for :commissions do |commissions| %>
+          <%= render 'commission_fields', :f => commissions %>
+        <% end %>
+        <div class="btn default">
+          <%= link_to_add_association 'Add Commissions', f, :commissions %>
+        </div> <!-- end Add Commissions btn -->
+    </div> <!-- end class commissions -->
+    <br>
+    <%= f.submit %>
+  <% end %>
 </div>
-
-  <h3>Tasks</h3>
-  <div class="tasks">
-      <%= f.simple_fields_for :tasks do |task| %>
-        <%= render 'task_fields', :f => task %>
-      <% end %>
-      <div class="btn default">
-        <%= link_to_add_association 'Add Task', f, :tasks %>
-      </div> <!-- end Add Task btn -->
-  </div> <!-- end class tasks -->
-
-  <h3>Commissions</h3>
-  <div class="commissions">
-      <%= f.simple_fields_for :commissions do |commissions| %>
-        <%= render 'commission_fields', :f => commissions %>
-      <% end %>
-      <div class="btn default">
-        <%= link_to_add_association 'Add Commissions', f, :commissions %>
-      </div> <!-- end Add Commissions btn -->
-  </div> <!-- end class commissions -->
-  <br>
-  <%= f.submit %>
-<% end %>
