@@ -1,4 +1,4 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
 			<a class="brand" href="#">COMPASS</a>
@@ -15,19 +15,16 @@
 						<%= link_to 'Completed List'.html_safe, complete_path %>
 					</li>
 					<li class="navbar-form navbar-left">
-				
 						<%= search_form_for @search do |f| %>
-							<%= f.text_field :project_name_cont, placeholder: "Deal Name Contains" %>
+							<%= f.text_field :project_name_cont, placeholder: "Deal Name Contains..." %>
 							<%= f.submit %>
 						<% end %>
-						
-					
 					</li>
 				</ul>
 				<% end %>
 					<div class="pull-right">
 								<% if logged_in? %>
-									<%= link_to 'Logout', logout_path, class: 'btn btn-default' %>
+									<%= link_to 'Logout', logout_path, class: 'btn btn-danger' %>
 								<% end %>
 					</div>
 			</div>
