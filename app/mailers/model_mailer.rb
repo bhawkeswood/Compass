@@ -18,4 +18,11 @@ class ModelMailer < ActionMailer::Base
 
     mail(to: "<#{user.email}>", subject: "Hey #{user.first_name}, you made a new Deal!")
   end
+
+  def event_reminder_notification(user, deal)
+    @user = user
+    @deal = deal
+
+    mail(to: "<#{user.email}>", subject: "Your task is almost due!")
+  end
 end
