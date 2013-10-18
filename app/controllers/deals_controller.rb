@@ -2,7 +2,8 @@ class DealsController < ApplicationController
   before_filter :require_login
 
   def index
-    @deals = Deal.all
+    @search = Deal.search(params[:q])
+    @deals = @search.result
   end
 
   def show

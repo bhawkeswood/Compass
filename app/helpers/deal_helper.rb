@@ -11,7 +11,7 @@ module DealHelper
   def all_tasks(deals)
     deals.each do |deal|
       if deal.incomplete_tasks.empty? == true
-        return "<h1>Yay!  You're done!</h1>".html_safe
+        return "<h1>Incomplete Tasks</h1>".html_safe
       else
         return "<h1>Incomplete Tasks</h1>".html_safe
       end
@@ -21,7 +21,7 @@ module DealHelper
   def all_commissions(deals)
     deals.each do |deal|
       if deal.unpaid_commissions.empty? == true
-        return "<h1>You've been paid!</h1>".html_safe
+        return "<h1>Unpaid Commissions</h1>".html_safe
       else
         return "<h1>Unpaid Commissions</h1>".html_safe
       end
