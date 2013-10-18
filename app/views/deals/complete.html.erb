@@ -1,5 +1,7 @@
 <div class="hero-unit">
-  <h1 class="list_header">Completed Tasks</h1>
+  <div class="list_header">
+    <h1>Completed Tasks</h1>
+  </div>
     <% @deals.each do |deal| %>
       <% if deal.complete_tasks.empty? == false %>
         <h3 class="link_proj_name"><%= link_to deal.project_name, deal %></h3>
@@ -16,7 +18,9 @@
       <br/>
     <% end %> <!-- end iteration through deals -->
   
-  <h1 class="list_header">Paid Commissions</h1>
+  <div class="list_header">
+    <h1>Paid Commissions</h1>
+  </div>
     <% @deals.each do |deal| %>
       <% if deal.paid_commissions.empty? == false %>
         <h3 class="link_proj_name"><%= link_to deal.project_name, deal %></h3>
