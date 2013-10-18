@@ -57,7 +57,7 @@ class DealsController < ApplicationController
 
   def time_offset
         @deal.incomplete_tasks do |task|
-          if (Time.now - task.due_date) < 1.day
+          if (DateTime.strptime("#{task.due_date}", format="%m/%d/%Y") - 1.days) <= DateTime.now
               ModelMailer.event_reminder_notification(@user, @deal).deliver
           end
         end
