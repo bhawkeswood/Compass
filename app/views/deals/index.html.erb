@@ -4,14 +4,6 @@
 		<%= all_tasks(@deals) %>
 	</div>
 
-	<div class="search_form">
-		<%= search_form_for @search do |f| %>
-			<%= f.label :project_name_cont, "Input Deal Name" %>
-			<%= f.text_field :project_name_cont %>
-			<%= f.submit %>
-		<% end %>
-	</div>
-
 	<% @deals.each do |deal| %>
 		<div class="hover">
 		<!-- We only want to return deals with unfinished tasks -->
