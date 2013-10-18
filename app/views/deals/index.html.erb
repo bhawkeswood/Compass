@@ -43,8 +43,8 @@
 	          <h4 class="incomplete"><input type="checkbox" data-commission-id="<%= commission_path(commission) %>" class="unpaid">
 							Commission Installment:
 							<%= commission.installment %></h4>
-							<h4>Commission Amount:
-							<%= commission.amount %></h4>
+							<h4>Commission Amount: $
+							<%= commission.formatted_price %></h4>
 		          <h4>Commission Due:
 		          <%= commission.commission_date %></h4>
 		          <br>
