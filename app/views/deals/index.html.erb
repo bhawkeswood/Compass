@@ -2,6 +2,7 @@
 	<!-- Display msg when all tasks are complete-->
 	<%= all_tasks(@deals) %>
 
+
 	<% @deals.each do |deal| %>
 		<!-- We only want to return deals with unfinished tasks -->
 		<% if deal.incomplete_tasks.empty? == false %>
@@ -15,7 +16,7 @@
 			<% deal.incomplete_tasks.each do |task| %>
 		    <input type="checkbox" data-task-id="<%= task_path(task) %>" class="incomplete">
 					<%= task.description %>
-		      <strong>|| Date Due: <%= task.due_date %></strong>  
+		      <strong>|| Date Due: <%= task.due_date %></strong><br/>
 			<% end %> <!-- end incomplete tasks iteration -->
 		<% end %> <!-- end if incomplete tasks is false statement -->
 	<% end %> <!-- end deals iteration -->
