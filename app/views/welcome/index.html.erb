@@ -1,16 +1,24 @@
-<div class="hero-unit">
-  <h1 class="text-center">This is your COMPASS</h1>
-  <p class="text-center">COMmission Personal ASSistant.  And yup, I just said ASS.</p>
+<body style="background: url('http://www.churchmultiplication.ca/wp-content/uploads/2012/01/toronto-sunset.jpg') no-repeat center">
+    
 
-  <div class="welcome hero-unit pull-left text-center">
-    <h2>Already a user?</h2><br/>
-    <h4>Sign in below!</h4><br/>
-      <%= link_to 'Login', new_session_path, class: 'btn btn-warning btn-large btn-block' %>
+  <div class="hero-unit", id="welcome_div">
+    <h1 class="text-center">Welcome to COMPASS</h1>
+    <p class="text-center" id="compass-full">Your COMmission Personal ASSistant
   </div>
 
-  <div class="welcome hero-unit pull-right text-center">
-    <h2>New User?</h2><br/>
-    <h4>Sign up here!</h4><br/>
-      <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-primary btn-large btn-block' %>
-  </div>
-</div>
+    <div class="welcome hero-unit pull-left text-center", id="welcome_div" >
+      <h2 class="user-type">Already a user?</h2>
+      <h4 class="Signing">Sign in below!</h4>
+        <div class="welcome-btn">
+          <%= link_to 'Login', new_session_path, class: 'btn btn-warning btn-large btn-block' %>
+        </div>  
+    </div>
+
+    <div class="welcome hero-unit pull-right text-center", id="welcome_div">
+      <h2 class="user-type">New User?</h2>
+      <h4 class="Signing">Sign up here!</h4>
+        <div class="welcome-btn">
+          <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-primary btn-large btn-block' %>
+      </div>
+    </div>
+</body>

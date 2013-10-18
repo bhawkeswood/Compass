@@ -13,6 +13,7 @@ body {
 .hero-unit {
   background-color: #1C1E22;
   border: solid #0C0D0E 1px;  
+  margin-top: 20px;
 }
 
 .ui-datepicker { 
@@ -103,4 +104,30 @@ a {
 
 .comm-content {
   padding-bottom: 20px;
+}
+
+.text-center {
+  padding-bottom: 10px;
+}
+
+.Signing {
+  font-weight: normal;
+  padding-bottom: 20px;
+}
+
+.user-type {
+  padding-bottom: 20px;
+}
+
+.welcome-btn {
+  padding-bottom: 50px;
+}
+
+#compass-full {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#welcome_div {
+  opacity: 0.9;
 }
