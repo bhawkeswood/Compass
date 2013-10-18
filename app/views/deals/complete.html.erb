@@ -23,7 +23,7 @@
         <% deal.commissions.each do |commission| %>
           <p data-commission-id="<%= commission.id %>">
             <% if commission.done == true  %>
-              <div class="content">
+              <div class="comm-content">
                 Commission Installment:
                 <%= commission.installment %>
                 <br>
