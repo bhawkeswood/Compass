@@ -47,7 +47,7 @@ body {
 }
 
 .hover {
-  border-top: 1px solid gray;
+  /*border-top: 1px solid gray;*/
 }
 
 a {
@@ -56,5 +56,14 @@ a {
     color: #50656F;
     text-decoration: none;
   }
+}
+
+.pending_panel {
+  background-color: #EE5F5B;
+  border: solid #0C0D0E 1px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  padding-bottom: 6px;
 }
 

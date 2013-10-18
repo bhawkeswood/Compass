@@ -1,6 +1,8 @@
 <div class="hero-unit">
-	<!-- Display msg when all tasks are complete-->
-	<%= all_tasks(@deals) %>
+	<div class="pending_panel">
+		<!-- Display msg when all tasks are complete-->
+		<%= all_tasks(@deals) %>
+	</div>
 
 	<% @deals.each do |deal| %>
 		<div class="hover">
@@ -23,8 +25,10 @@
 	<% end %> <!-- end deals iteration -->
 	<br>
 	
-	<!-- Display msg when all commissions are paid-->
-	<%= all_commissions(@deals) %>
+	<div class="pending_panel">
+		<!-- Display msg when all commissions are paid-->
+		<%= all_commissions(@deals) %>
+	</div>
 
 		<% @deals.each do |deal| %>
 		<div class="hover">
@@ -38,7 +42,7 @@
 
 				<% deal.unpaid_commissions.each do |commission| %>
           <div id="check">
-	          <h4 class="incomplete"><input type="checkbox" data-commission-id="<%= commission_path(commission) %>" class="unpaid">
+	          <input type="checkbox" data-commission-id="<%= commission_path(commission) %>" class="unpaid">
 							Commission Installment:
 							<%= commission.installment %></h4>
 							<h4>Commission Amount:
