@@ -9,6 +9,19 @@
 <body>
 	<%= render 'layouts/shared/nav' %>
 
+  <div class="flash_alerts">
+    <% if flash[:alert] %>
+      <div class="alert alert-danger">
+        <p id="alert"><%= flash[:alert] %></p>
+      </div>
+    <% end %>
+    <% if flash[:notice] %>
+      <div class="alert alert-info">  
+        <p id="notice"><%= flash[:notice] %></p>
+      </div>
+    <% end %>
+  </div>  
+
 	<div class="container">
 		<%= yield %>
 	</div>
