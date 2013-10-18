@@ -2,7 +2,9 @@
 // All this logic will automatically be available in application.js.
 $(function(){
 	$('.tasks').on("cocoon:after-insert", function(){
-		$('div#task_datepicker input').datepicker();
+		$('div#task_datepicker input').datepicker({
+			changeMonth: true,
+      changeYear: true});
 		$('div#req_description input').typeahead({
 			name: 'description',
 			local: ["Commitment Letter", 
