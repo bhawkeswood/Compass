@@ -29,10 +29,12 @@ class DealsController < ApplicationController
   end
 
   def edit
+    @search = Deal.search(params[:q])
     @deal = Deal.find(params[:id])
   end
 
   def update
+    @search = Deal.search(params[:q])
     @deal = Deal.find(params[:id])
     if @deal.update_attributes deal_params
       redirect_to deal_path
@@ -49,7 +51,7 @@ class DealsController < ApplicationController
 
   def complete
     @search = Deal.search(params[:q])
-    @deals = Deal.all
+    @deals = @search.result
   end
 
   private
