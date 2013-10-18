@@ -3,13 +3,16 @@
 
 body {
 	padding: 50px;
-  background-image: url('http://profilanakangin.files.wordpress.com/2012/03/black-and-white-compass-rain-drops-walp-long-goodbye.png');
   background-attachment: fixed;
   background-position: center;
+  background-color: #272B2E;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #C8C8C8;
 }
 
 .hero-unit {
-  box-shadow: 3px 3px 2px #888888;
+  background-color: #1C1E22;
+  border: solid #0C0D0E 1px;  
 }
 
 .ui-datepicker { 
@@ -32,13 +35,26 @@ body {
 
 .link_proj_name {
   padding-top: 10px;
+  color: #79878D;
 }
 
 .incomplete {
   margin-top: -10px;
   margin-bottom: 15px;
+  &:hover{
+    color:rgb(122, 118, 116);
+  }
 }
 
 .hover {
   border-top: 1px solid gray;
 }
+
+a {
+  color: #79878D;
+  &:hover {
+    color: #50656F;
+    text-decoration: none;
+  }
+}
+
