@@ -10,8 +10,7 @@
 		<% if deal.incomplete_tasks.empty? == false %>
 			<h3 class="link_proj_name"><%= link_to deal.project_name, deal %><h3>
 			
-			<div id="incompleteTask">
-			<p class="btn btn-default btn-mini pull-right">	
+			<p class="btn btn-default btn-mini pull-right", id="edit-deal">	
 				<%= link_to "Edit this Deal", edit_deal_path(deal) %>
 			</p>
 
@@ -41,8 +40,7 @@
 				</p>
 
 				<% deal.unpaid_commissions.each do |commission| %>
-          <div id="check">
-	          <input type="checkbox" data-commission-id="<%= commission_path(commission) %>" class="unpaid">
+	          <h4 class="incomplete"><input type="checkbox" data-commission-id="<%= commission_path(commission) %>" class="unpaid">
 							Commission Installment:
 							<%= commission.installment %></h4>
 							<h4>Commission Amount:
@@ -50,7 +48,6 @@
 		          <h4>Commission Due:
 		          <%= commission.commission_date %></h4>
 		          <br>
-        	</div>
 				<% end %> <!-- end unpaid commissions iteration -->
 			<% end %> <!-- end if unpaid commissions is false statement -->
 		</div>

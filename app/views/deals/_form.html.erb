@@ -1,7 +1,9 @@
-<%= simple_form_for @deal do |f| %>
-  <%= f.input :project_name, placeholder: 'e.g. GlassDoor Towers' %>
-  <%= f.input :unit_number, placeholder: 'e.g. 1816' %>
-  <%= f.input :developer, placeholder: 'e.g. K&B Corp.', hint: '* required field' %>
+<div id="req-form">
+  <%= simple_form_for @deal do |f| %>
+    <%= f.input :project_name, placeholder: 'e.g. GlassDoor Towers' %>
+    <%= f.input :unit_number, placeholder: 'e.g. 1816' %>
+    <%= f.input :developer, placeholder: 'e.g. K&B Corp.', hint: '* required field' %>
+</div>
 
   <h3>Tasks</h3>
   <div class="tasks">
