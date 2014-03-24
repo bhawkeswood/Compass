@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require angular
 //= require typeahead.js/dist/typeahead.min.js
 //= require_tree .
 //= require cocoon

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="compassApp">
 <head>
   <title>Compass</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
@@ -22,7 +22,7 @@
     <% end %>
   </div>  
 
-	<div class="container">
+	<div ng-view class="container">
 		<%= yield %>
 	</div>
 </body>

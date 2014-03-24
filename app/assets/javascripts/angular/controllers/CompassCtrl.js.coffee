@@ -1,0 +1,1 @@
+@compassApp.controller 'CompassCtrl', ['$scope', ($scope)] ->
